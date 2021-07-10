@@ -1,0 +1,12 @@
+<html>
+<head>
+
+	<title>	HTML Practice  </title>
+
+</head>
+<body>
+<h1>	HTML title</h1>
+<p>This is just a para</p>
+
+</body>
+</html>

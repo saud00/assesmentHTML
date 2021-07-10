@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <title >HTML Practice</title>
+
+    <style>
+body{background-image: url(../malal/src/styles/img/bg2.jpg);
+background-repeat: no-repeat;background-size:cover;background-attachment: fixed;}
+      p {
+        color: blue;
+      }
+      pre {
+        color: yellow;
+      }
+      a:link,
+      a:visited {
+        background-color: red;
+      }
+      a:hover {
+        background-color: pink;
+      }
+      table,td,th{border:2px solid goldenrod; border-collapse:collapse}
+
+      html{scroll-behavior: smooth;}
+@media screen and (max-width:650px) {
+  .p, .a{width: 100%;}
+}
+
+.abc{color:indigo}
+
+    </style>
+  </head>
+  <body>
+    <h1 id="t1">HTML title</h1>
+    <p>This is just a para</p>
+    <hr />
+    <a href="www.w3schools.com">W3 school official website</a>
+    <br />
+    <img src="w3schools.jpg" alt="img" height="30vh" width="30vw" />
+    <br />
+
+    <hr />
+    <pre>
+
+this is good to see you after a long time
+
+this is the second line with pre tag.
+
+and this is the last one. keep margins with eachother to stay safe
+</pre
+    >
+
+    The following are the some usefull tags for text.<br />
+
+    <em>Emphasized &nbsp; &nbsp; text</em><br />
+    <i>I am italic text</i><br />
+    <del>I am feeling cold, draw a line on me</del><br />
+    <ins>I uncover the blanket</ins><br />
+
+    <blockquote>
+      Browsers give margins <q> to blockquote text so</q> that reader<br />
+      can differentitate that this is not a normal sentence
+    </blockquote>
+
+    <address>
+      This is my home <br />address, micael here <br />house # 43 B jfos road
+    </address>
+
+    <a href="www.w3schools.com" target="_blank"
+      >target page will be blank, self, parent or top</a
+    >
+    <br><br><br>
+    <br><br><br>
+
+<table>
+  <caption>HTML Table Practice</caption>
+<tr>
+<th>Name</th>
+<th>Address</th>
+</tr><tr>
+<td>Saud</td>
+<td>jfs # 54 Fs road</td></tr>
+</table>
+
+    <br><br><br>
+    <br><br><br>
+
+<ul><li>Lumber 1 </li><li>Lumber 2</li></ul>
+
+    <br><br><br>
+
+<div id="1">div is a block level element. It means every div starts from new line and consume full width</div>
+<span>While span elemnt is inline every span elements are shown in one line</span>
+
+    <br><br><br>
+
+<div class="abc" >All div's which contain class 'abc', will be styled as class</div>
+<span>Difference between id and class is that, many divs have same class but id is always unique</span>
+
+    <br><br><br>
+<a href="#t1">go to title (this is how goto statment works)</a>
+<a href='page.jsx#t1' >This will allow you to jumpTo specific ID at page.jsx</a>
+
+
+<script>
+function changeClassABC(){
+  document.getElementById("1").innerHTML = "we can change any HTML tag text,color,img by using simple JS"
+}
+</script>
+
+
+<button onclick="changeClassABC()">Click me</button>
+
+
+<br><br><br>
+
+<video height="50vh" width="50vw" autoplay muted >
+  <source src="video.mp4" type="video/mp4" >
+  your browser doesnot support video tag
+</video>
+
+<br><br><br>
+
+<div>Contact me </div>
+<form action="mutation" >
+  <label for="name">First name</label>
+  <input type="text" id="name" name="name" >
+  <input type="submit" value="submit" >
+</form>
+<br><br><br>
+
+
+  </body>
+</html>
