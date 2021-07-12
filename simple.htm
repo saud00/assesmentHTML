@@ -3,10 +3,17 @@
 <html>
   <head>
     <title >HTML Practice</title>
+    <link rel="stylesheet" href="simple.css">
 
     <style>
-body{background-image: url(../malal/src/styles/img/bg2.jpg);
-background-repeat: no-repeat;background-size:cover;background-attachment: fixed;}
+      body{
+    background-image: url(../malal/src/styles/img/bg.jpg);
+    background-repeat: no-repeat;
+    background-size:cover;
+    background-attachment: fixed;
+    text-align: justify;
+
+  }
       p {
         color: blue;
       }
@@ -20,26 +27,30 @@ background-repeat: no-repeat;background-size:cover;background-attachment: fixed;
       a:hover {
         background-color: pink;
       }
-      table,td,th{border:2px solid goldenrod; border-collapse:collapse}
+      table,td,th{border:2px solid goldenrod; border-collapse:collapse ;
+  padding: 10px;}
 
       html{scroll-behavior: smooth;}
-@media screen and (max-width:650px) {
-  .p, .a{width: 100%;}
-}
+      @media screen and (max-width:650px) {
+      .p, .a{width: 100%;}
+      }
 
-.abc{color:indigo}
+      .abc{color:indigo}
+   
+
 
     </style>
   </head>
   <body>
-    <h1 id="t1">HTML title</h1>
-    <p>This is just a para</p>
+    <h1 id="t1" class="t1">HTML title &#128525</h1>
+    <p class="para">This is just a para</p>
     <hr />
     <a href="www.w3schools.com">W3 school official website</a>
     <br />
     <img src="w3schools.jpg" alt="img" height="30vh" width="30vw" />
     <br />
-
+<span>Block elements always consume all the width of container</span><br>
+<span>For centering the element you should first set the width of an element</span>
     <hr />
     <pre>
 
@@ -90,7 +101,7 @@ and this is the last one. keep margins with eachother to stay safe
 
     <br><br><br>
 
-<div id="1">div is a block level element. It means every div starts from new line and consume full width</div>
+<div id="1" class="lorem">div is a block level element. It means every div starts from new line and consume full width</div>
 <span>While span elemnt is inline every span elements are shown in one line</span>
 
     <br><br><br>
@@ -99,8 +110,10 @@ and this is the last one. keep margins with eachother to stay safe
 <span>Difference between id and class is that, many divs have same class but id is always unique</span>
 
     <br><br><br>
-<a href="#t1">go to title (this is how goto statment works)</a>
+<a href="#list1">go to # id (this is how goto statment works)</a>
 <a href='page.jsx#t1' >This will allow you to jumpTo specific ID at page.jsx</a>
+
+<p class="overflow">Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit voluptates dignissimos tempore deleniti alias reiciendis placeat quisquam ex vero voluptate, praesentium ut. Ipsa, sit dolor cum ut laboriosam officia numquam.</p>
 
 
 <script>
@@ -114,13 +127,26 @@ function changeClassABC(){
 
 
 <br><br><br>
-
+<div class="lorem">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+   Aliquam, autem! Aspernatur dicta expedita soluta, ipsam vel totam.
+   Cupiditate iusto, laboriosam sapiente ducimus eveniet vel at fuga eum
+    excepturi accusamus exercitationem?</div>
 <video height="50vh" width="50vw" autoplay muted >
+  
+<br><br><br>
   <source src="video.mp4" type="video/mp4" >
   your browser doesnot support video tag
 </video>
 
-<br><br><br>
+<br><br>
+<img class="float" src="../malal/src/styles/img/bg2.jpg" height="200vh" width="200vw" alt="random" >
+
+<img class="float2" src="../malal/src/styles/img/bg2.jpg" height="200vh" width="200vw" alt="random" >
+<div> Lorem ipsum dolor sit amet consectetur adipisicing elit. A ea nostrum ipsum impedit suscipit recusandae sed aperiam aut laboriosam ex eos, laborum voluptatum dolores quia commodi quos error hic nisi? Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto placeat quod, qui facilis ut veniam laboriosam tempore voluptatum ratione beatae minus dignissimos? Atque dolores facere ab ex nesciunt a reprehenderit! Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse unde dignissimos doloribus modi dolore omnis praesentium aliquam in fuga veritatis eius, necessitatibus hic ipsum quam sequi ex exercitationem tempora perferendis?Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi laborum, eius aspernatur impedit quidem cupiditate autem voluptas qui itaque placeat ducimus incidunt vel molestiae dignissimos aut aliquid doloribus ea nam.
+</div>
+<br>
+
+
 
 <div>Contact me </div>
 <form action="mutation" >
@@ -130,6 +156,12 @@ function changeClassABC(){
 </form>
 <br><br><br>
 
+<ol id="list1">
+  <li>product 1</li><li>product 2</li><li>product 3</li>
+</ol>
+
+
+<div class="fixed">This is fixed div<br> message us for help</div>
 
   </body>
 </html>

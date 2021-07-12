@@ -1,0 +1,63 @@
+table {
+  margin: 20vh auto;
+}
+p {
+  opacity: 0.5;
+}
+
+pre {
+  width: 100%;
+  background-image: url(../malal/src/styles/img/bg2.jpg);
+  background-size: cover;
+}
+
+div.lorem {
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  text-indent: 60px;
+  text-shadow: darkblue;
+  letter-spacing: 3px;
+  line-height: 5vh;
+  word-spacing: 10px;
+  outline: 5px groove cornflowerblue;
+}
+
+h1.t1 {
+  text-shadow: 2px 2px 5px green;
+  text-align: center;
+  color: red;
+  font-variant: small-caps;
+}
+
+ol {
+  list-style-type: square; /* circle, uppar-roman , lower-alpha*/
+}
+
+tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+table {
+  width: 50%;
+  height: 10vw;
+}
+th {
+  background-color: steelblue;
+  color: white;
+}
+
+div.fixed {
+  position: fixed;
+  bottom: 0px;
+  right: 0px;
+  background-color: yellowgreen;
+}
+
+img.float {
+  float: right;
+}
+img.float2 {
+  float: left;
+}
+
+p.overflow {
+  overflow: visible;
+}
