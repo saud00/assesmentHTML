@@ -12,10 +12,13 @@
     background-size:cover;
     background-attachment: fixed;
     text-align: justify;
+    box-sizing: border-box;
 
   }
       p {
-        color: blue;
+        display: flex;
+        color: rgb(44, 8, 5);
+        justify-content: center;
       }
       pre {
         color: yellow;
@@ -59,8 +62,14 @@ this is good to see you after a long time
 this is the second line with pre tag.
 
 and this is the last one. keep margins with eachother to stay safe
-</pre
-    >
+</pre>
+
+<div>
+  <img  class="imgcenter"  src="../malal/src/styles/img/faces/marc.jpg" alt="face" height="200px" width="200px" >
+  <p class="" >we center this image by setting display=block and margin=auto </p>
+  <p class="" >we center this text by setting display=flex and justify-content=center for horizontal and align for vertical </p>
+
+</div>
 
     The following are the some usefull tags for text.<br />
 
@@ -105,10 +114,11 @@ and this is the last one. keep margins with eachother to stay safe
 <span>While span elemnt is inline every span elements are shown in one line</span>
 
     <br><br><br>
-
+<div>
 <div class="abc" >All div's which contain class 'abc', will be styled as class</div>
 <span>Difference between id and class is that, many divs have same class but id is always unique</span>
-
+This yellow color through div>span
+</div>
     <br><br><br>
 <a href="#list1">go to # id (this is how goto statment works)</a>
 <a href='page.jsx#t1' >This will allow you to jumpTo specific ID at page.jsx</a>
@@ -139,10 +149,11 @@ function changeClassABC(){
 </video>
 
 <br><br>
-<img class="float" src="../malal/src/styles/img/bg2.jpg" height="200vh" width="200vw" alt="random" >
+<div style="overflow: auto;">
+<img class="float" src="../malal/src/styles/img/bg2.jpg" height="400vh" width="200vw" alt="random" >
 
 <img class="float2" src="../malal/src/styles/img/bg2.jpg" height="200vh" width="200vw" alt="random" >
-<div> Lorem ipsum dolor sit amet consectetur adipisicing elit. A ea nostrum ipsum impedit suscipit recusandae sed aperiam aut laboriosam ex eos, laborum voluptatum dolores quia commodi quos error hic nisi? Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto placeat quod, qui facilis ut veniam laboriosam tempore voluptatum ratione beatae minus dignissimos? Atque dolores facere ab ex nesciunt a reprehenderit! Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse unde dignissimos doloribus modi dolore omnis praesentium aliquam in fuga veritatis eius, necessitatibus hic ipsum quam sequi ex exercitationem tempora perferendis?Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi laborum, eius aspernatur impedit quidem cupiditate autem voluptas qui itaque placeat ducimus incidunt vel molestiae dignissimos aut aliquid doloribus ea nam.
+ Lorem ipsum dolor sit amet consectetur adipisicing elit. A ea nostrum ipsum impedit suscipit recusandae sed aperiam aut laboriosam ex eos, laborum voluptatum dolores quia commodi quos error hic nisi? Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto placeat quod, qui facilis ut veniam laboriosam tempore voluptatum ratione beatae minus dignissimos? Atque dolores facere ab ex nesciunt a reprehenderit! Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse unde dignissimos doloribus modi dolore omnis praesentium aliquam in fuga veritatis eius, necessitatibus hic ipsum quam sequi ex exercitationem tempora perferendis?Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi laborum, eius aspernatur impedit quidem cupiditate autem voluptas qui itaque placeat ducimus incidunt vel molestiae dignissimos aut aliquid doloribus ea nam.
 </div>
 <br>
 

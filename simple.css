@@ -1,14 +1,18 @@
 table {
   margin: 20vh auto;
 }
-p {
-  opacity: 0.5;
-}
 
 pre {
   width: 100%;
   background-image: url(../malal/src/styles/img/bg2.jpg);
   background-size: cover;
+}
+
+.imgcenter {
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+  background-color: #f2f2f2;
 }
 
 div.lorem {
@@ -60,4 +64,8 @@ img.float2 {
 
 p.overflow {
   overflow: visible;
+}
+
+div > span {
+  color: yellow;
 }
