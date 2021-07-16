@@ -31,9 +31,99 @@ h1.t1 {
   color: red;
   font-variant: small-caps;
 }
-
+div {
+  background-color: #2196f3;
+}
 ol {
   list-style-type: square; /* circle, uppar-roman , lower-alpha*/
+}
+.grid {
+  display: grid;
+  grid-gap: 10px;
+  align-content: space-around;
+  border: 5px solid hotpink;
+  grid: 30vh 30vh auto / auto auto auto auto;
+  padding: 10px;
+}
+.grid > div {
+  text-align: center;
+  background-color: rgba(255, 255, 255, 0.8);
+  padding: 12px 0;
+  line-height: 25vh;
+}
+
+.item1 {
+  grid-column: 1/5;
+  grid-row: 1;
+}
+.item2 {
+  grid-row: 2 / span 4;
+  grid-row: 2;
+}
+
+.gridTemp {
+  display: grid;
+  grid-template-columns: 1fr 4fr 1fr;
+  grid-template-rows: 1fr 4fr 1fr;
+  align-content: center;
+  grid-gap: 15;
+  height: 70vh;
+  border-radius: 15px 50px;
+}
+.gridTemp > div {
+  margin: 10px;
+  text-align: center;
+  background-color: rgba(255, 255, 255, 0.8);
+}
+
+.item11 {
+  border-radius: 15px 50px;
+  grid-column: 1 / span3;
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: center;
+  position: relative;
+}
+.item11 > span {
+  flex-grow: 1;
+}
+span > a {
+  width: auto;
+  line-height: 10vh;
+  font-size: 25px;
+}
+
+.imgOverlay {
+  position: relative;
+}
+.gridImg {
+  position: absolute;
+  bottom: 100%;
+  left: 0;
+  right: 0;
+  height: 0;
+  width: 100%;
+  overflow: hidden;
+  transition: 0.5s ease-in-out;
+  background-color: rgb(7, 112, 250);
+}
+.imgOverlay:hover .gridImg {
+  bottom: 0;
+  height: 100%;
+}
+.overlayButton {
+  position: absolute;
+  padding: 2.5vh 2.5vw;
+  font-size: 15px;
+  border: none;
+  top: 50%;
+  background-color: rgb(95, 151, 102);
+  left: 50%;
+  color: aliceblue;
+  overflow: hidden;
+  text-align: center;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
 }
 
 tr:nth-child(even) {
@@ -57,9 +147,12 @@ div.fixed {
 
 img.float {
   float: right;
+  border-radius: 50%;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 img.float2 {
   float: left;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
 p.overflow {
@@ -68,4 +161,10 @@ p.overflow {
 
 div > span {
   color: yellow;
+}
+
+.flex {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }

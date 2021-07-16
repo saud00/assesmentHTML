@@ -44,6 +44,7 @@
 
     </style>
   </head>
+
   <body>
     <h1 id="t1" class="t1">HTML title &#128525</h1>
     <p class="para">This is just a para</p>
@@ -68,7 +69,28 @@ and this is the last one. keep margins with eachother to stay safe
   <img  class="imgcenter"  src="../malal/src/styles/img/faces/marc.jpg" alt="face" height="200px" width="200px" >
   <p class="" >we center this image by setting display=block and margin=auto </p>
   <p class="" >we center this text by setting display=flex and justify-content=center for horizontal and align for vertical </p>
+</div>
 
+
+<br><br><br><br>
+
+<div class="gridTemp">
+  <div class="item11">
+    <span><a href="#home"  style="width:100%;margin: 20px auto;">home</a></span>
+    <span><a href="#storre" style="justify-content: center;">Men</a></span>
+    <span><a href="#contact" style="text-align: center;">Women</a></span>
+    <span><a href="#storre" style="justify-content: center;">store</a></span>
+    <span><a href="#contact" style="text-align: center;">Contact</a></span>
+  </div>
+  <div class="imgOverlay">
+    <img src="../malal/src/styles/img/faces/christian.jpg" alt="avatar" height="100%" width="100%">
+    <div class="gridImg">
+      <button class="overlayButton">BUY ME</button>
+    </div>
+  </div>
+  <div>C</div>
+  <div>D</div>
+  <div class="item11">E</div>
 </div>
 
     The following are the some usefull tags for text.<br />
@@ -104,7 +126,6 @@ and this is the last one. keep margins with eachother to stay safe
 </table>
 
     <br><br><br>
-    <br><br><br>
 
 <ul><li>Lumber 1 </li><li>Lumber 2</li></ul>
 
@@ -132,9 +153,32 @@ function changeClassABC(){
 }
 </script>
 
-
 <button onclick="changeClassABC()">Click me</button>
 
+<div class="flex">
+  <h1>Info about FlexBox</h1> <br>
+  <div>justify-content is a container style which center the item elements </div> <br>
+  <div>align-content is used to align flex lines</div><br>
+  <div>While align-items is used for flex items</div><br>
+  <br>
+
+  <div style="display:flex;flex-direction: row;align-self: center;">
+  <ul>Flex container
+  <li>flex-flow</li>
+  <li> flex-wrap</li>
+   <li>align-items</li>
+   <li> flex-direction </li>
+   <li>  justify-content </li>
+   <li> align-content</li>
+  </ul>
+  <ul>Flex Items<li>order </li>
+   <li>flex-grow</li>  
+   <li>flex-shrink</li> 
+   <li>flex-basis</li> 
+   <li>flex</li> 
+   <li>align-self</li> </ul></div>
+
+</div>
 
 <br><br><br>
 <div class="lorem">Lorem ipsum dolor sit amet consectetur adipisicing elit.
