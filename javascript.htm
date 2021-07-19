@@ -1,0 +1,88 @@
+<html>
+<head>
+
+	<title>	HTML Practice  </title>
+<style>
+	body{margin: 3vh 5vw;}
+.text{background-color:dodgerblue;}
+code{background-color:lightslategray}
+strong{font-size: larger;background-color: orangered;}
+.des{background-color: mediumpurple;}
+.grid3{display: grid; grid-template-columns: 1fr 1fr 1fr; width: 100%;min-height: 10vh;}
+</style>
+</head>
+
+
+<body>
+	<script>
+
+		const person={name="saud", email="saud@hmail.com", password="fjsdjf" };
+		document.getElementById("jsCode").innerHTML=person.name+" "+"thanks";
+	</script>
+
+<script>
+
+
+	function changeText(){
+		document.getElementById("changeText").innerHTML="i am changed through JS"
+	};
+	
+const person = {
+  firstName : "John",
+  lastName  : "Doe",
+  age     : 50,
+  eyeColor  : "blue"
+};
+
+document.getElementById("demo").innerHTML =
+person.firstName + " is " + person.age + " years old.";
+ 
+
+</script>
+
+
+
+<h1>	HTML title</h1>
+<div style="display: flex;"><p>This page contain javascript fundamentals. Page contain differnt colors for differnent purposes.</p><br>
+	&nbsp; &nbsp;<p class="text">ACTION LINE</p> &nbsp; &nbsp; <p><code>CODE</code></p> &nbsp; &nbsp; <p class="des">DESCRIPTION</p></div>
+
+
+
+<div id="changeText" class="text" onclick="changeText()"> Click me to change HTML text</div>
+ <code> CODE  : document.getElementById("changeText").innerHTML="i am changed through JS"</code>
+<br><hr><br>
+
+<div class="des">We can change any style of text, div like display, color, fontSize etc.</div>
+<div id="changeColor" class="text" onclick="document.getElementById('changeColor').style.color='white'"> Click me to change color of text</div>
+<code class="code"> CODE  : document.getElementById('changeColor').style.color='white'"</code>
+<br><hr><br>
+
+<div class="des"><i><strong> Hoisting</strong></i>: varialbe can be accessed before its declaration </div>
+<code>a=5;</code><br><code>var a;</code>
+
+<div style="display: grid; grid-template-columns: 1fr 1fr 1fr; width: 100%;min-height: 10vh;" >
+<div style="text-align: center;" ><i><strong> var</strong></i>
+	<div>global/functional scope</div><div>var can be redeclared</div><div>var and let can be declared without being initialized </div>
+</div>
+<div style="text-align: center;" ><i><strong> let</strong></i>
+	<div>block scope, with in {}</div><div>let variables can be updated but not re-declared</div><div>let may not be initialized during declaration</div>
+</div>
+<div style="text-align: center;" ><i><strong> const</strong></i>
+	<div>block scope</div><div>const variables can neither be updated nor re-declared</div><div>const must be initialized during declaration</div>
+</div>
+</div>
+
+<p class="des" id="jsCode"></p>
+<p class="des" id="demo"></p>
+
+
+
+<br><br><br>
+
+<div style="display:flex;justify-content: flex-end;">
+	<div class="text" >This button prints the whole page</div><br>
+<button style=" background-color: midnightblue;color:navajowhite;border: none;border-radius: 20%; font-size: 15px;padding: 1vh 3vw;"
+ onclick="print()">print</button>
+</div>
+</body>
+</html>		
