@@ -50,6 +50,15 @@ document.getElementById("thisKeyword").innerHTML = person.fullName();
 
 <br><br><br>
 
+<div class="des">We can also add document.addEventListener in place of DOM Elements like onClick</div>
+<div class="text" id="addEvent">click me</div>
+<div class="text" id="listener"></div>
+<code>document.getElementById("addEvent").addEventListener("click", function(){
+	document.getElementById("listener").innerHTML= "I am provoked by addEventListener"
+})</code>
+
+<br><br><br>
+
 <div class="des"> We can change the innerHTML of div, botton or any other container itself, by using "THIS"</div>
 <div class="text" onclick="this.innerHTML=Date()"> click me to show date</div>
 <code>e.g. "<"button onclick="this.innerHTML=Date()"> button </code>
@@ -69,6 +78,22 @@ document.getElementById("thisKeyword").innerHTML = person.fullName();
 
 <p id="jsCode"></p>
 
+<br><br>
+
+<p id="slice" class="text" ></p>
+<div class="des">Slice function will cut the line from (start, end) char of line</div>
+<code>
+	document.getElementById("slice").innerHTML=string.slice(5);
+</code>
+
+<br><br>
+
+<p class="text" id="split"></p>
+	convert string into array, spliting by spaces
+	<div class="des"></div>
+<code>
+	const toot=document.getElementById("split").innerHTML=arr.split(" ");
+</code>
 
 <br><br><br>
 
@@ -80,6 +105,16 @@ onclick="print()">print</button>
 
 
 <script>
+
+	const x = 50.55;
+	const x1 = x.toFixed(0)
+
+	let str = "This slice function will cut the line from (start, end) char of line";
+	const filter = str.slice(5);
+	document.getElementById("slice").innerHTML=filter;
+
+	let arr = "convert string into array, spliting by spaces"
+	const toot=document.getElementById("split").innerHTML=arr.split(" ");
 
 	const person={firstName:"saud", lastName:"Malik",  email:"saud@hmail.com", password:"fjsdjf",
 	 fullName : function(){
@@ -94,6 +129,10 @@ onclick="print()">print</button>
 
 	document.getElementById("thisKeyword").innerHTML = person.fullName();
 	
+
+	document.getElementById("addEvent").addEventListener("click", function(){
+		document.getElementById("listener").innerHTML= "I am provoked by addEventListener"
+	})
 
 </script>
 </body>
