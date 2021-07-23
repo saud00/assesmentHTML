@@ -17,8 +17,8 @@ strong{font-size: larger;background-color: orangered;}
 
 
 <h1>	HTML title</h1>
-<div style="display: flex;"><p>This page contain javascript fundamentals. Page contain differnt colors for differnent purposes.</p><br>
-	&nbsp; &nbsp;<p class="text">ACTION LINE</p> &nbsp; &nbsp; <p><code>CODE</code></p> &nbsp; &nbsp; <p class="des">DESCRIPTION</p></div>
+<div style="display: flex;"><div>This page contain javascript fundamentals. Page contain differnt colors for differnent purposes.</div><br>
+	&nbsp; &nbsp;<div class="text">ACTION LINE</div> &nbsp; &nbsp; <div><code>CODE</code></div> &nbsp; &nbsp; <div class="des">DESCRIPTION</div></div>
 	
 
 <div id="changeText" class="text" onclick="changeText()"> Click me to change HTML text</div>
@@ -76,24 +76,43 @@ document.getElementById("thisKeyword").innerHTML = person.fullName();
 </div>
 </div>
 
-<p id="jsCode"></p>
+<div id="jsCode"></div>
 
 <br><br>
 
-<p id="slice" class="text" ></p>
 <div class="des">Slice function will cut the line from (start, end) char of line</div>
+<div id="slice" class="text" ></div>
 <code>
 	document.getElementById("slice").innerHTML=string.slice(5);
 </code>
 
 <br><br>
 
-<p class="text" id="split"></p>
+<div class="des">
 	convert string into array, spliting by spaces
-	<div class="des"></div>
+</div>
+<div class="text" id="split"></div>
 <code>
 	const toot=document.getElementById("split").innerHTML=arr.split(" ");
 </code>
+<br><br><br>
+
+<div class="des">Reverse of split, toString function convert array into string</div>
+<div class="text" id="strig" ></div>
+<code>
+	const strig = document.getElementById("strig").innerHTML = toot.toString();
+</code>
+
+<br><br><br>
+
+<div class="des" id="concat">The concat() method is used to merge (concatenate) arrays: also it can add string value at the end like push()</div>
+<code>array1.concat(array2, array3)</code>
+
+<br><br><br>
+
+<div class="des">toFixed function is used to strict numbers after the decimal. </div>
+<div id="fixed" class="text"></div>
+<code></code>
 
 <br><br><br>
 
@@ -107,7 +126,7 @@ onclick="print()">print</button>
 <script>
 
 	const x = 50.55;
-	const x1 = x.toFixed(0)
+	document.getElementById("fixed").innerHTML = x.toFixed(0)
 
 	let str = "This slice function will cut the line from (start, end) char of line";
 	const filter = str.slice(5);
@@ -116,9 +135,14 @@ onclick="print()">print</button>
 	let arr = "convert string into array, spliting by spaces"
 	const toot=document.getElementById("split").innerHTML=arr.split(" ");
 
+	const strig = document.getElementById("strig").innerHTML = toot.toString();
+
+
+document.getElementById("concat").innerHTML = str.concat(strig);
+
 	const person={firstName:"saud", lastName:"Malik",  email:"saud@hmail.com", password:"fjsdjf",
 	 fullName : function(){
-		 return this.firstName + " " + this.lastName
+		 return this.firstName + " " + this.lastName 
 	 } 
 	};
 	document.getElementById("jsCode").innerHTML=`${person.firstName} hello thanks`;
