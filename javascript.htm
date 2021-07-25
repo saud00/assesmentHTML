@@ -116,6 +116,22 @@ document.getElementById("thisKeyword").innerHTML = person.fullName();
 
 <br><br><br>
 
+<div class="des">There are immidiately invoakable Expressions</div>
+<code>
+	(function(){console.log('I am Immidiately Invokable Function Expression')})();
+</code>
+
+<br><br><br>
+
+<div class="des">forIn loop is often used for interaion i objects</div>
+<code>
+	for(let i in person){
+		console.log(`${i} : ${person[i]}`)
+	}
+</code>
+
+<br><br><br>
+
 <div style="display:flex;justify-content: flex-end;">
 	<div class="text" >This button prints the whole page</div><br>
 <button style=" background-color: midnightblue;color:navajowhite;border: none;border-radius: 20%; font-size: 15px;padding: 1vh 3vw;"
@@ -124,6 +140,11 @@ onclick="print()">print</button>
 
 
 <script>
+
+	(function(name){console.log(`I am Immidiately Invokable Function Expression ${name}`)})("saud");
+
+	const birthday = new Date('23/03/1993');
+	console.log(birthday);
 
 	const x = 50.55;
 	document.getElementById("fixed").innerHTML = x.toFixed(0)
@@ -140,7 +161,32 @@ onclick="print()">print</button>
 
 document.getElementById("concat").innerHTML = str.concat(strig);
 
-	const person={firstName:"saud", lastName:"Malik",  email:"saud@hmail.com", password:"fjsdjf",
+const cars= [
+	{
+		name: 'mercidies',
+		model: 'cc130',
+		engine: '2000cc',
+	},
+	{
+		name: 'Honda',
+		model: 'Civic',
+		engine: '1800cc',
+	},
+	{
+		name: 'corolla',
+		model: 'grandi',
+		engine: '1600cc',
+	}
+];
+
+	const obj = cars.forEach(function (val) {
+		//return (val)	;
+		console.log(val);
+	})
+	console.log(obj)
+
+
+const person={firstName:"saud", lastName:"Malik",  email:"saud@hmail.com", password:"fjsdjf",
 	 fullName : function(){
 		 return this.firstName + " " + this.lastName 
 	 } 
@@ -157,6 +203,11 @@ document.getElementById("concat").innerHTML = str.concat(strig);
 	document.getElementById("addEvent").addEventListener("click", function(){
 		document.getElementById("listener").innerHTML= "I am provoked by addEventListener"
 	})
+
+	for(let i in person){
+		console.log(`${i} : ${person[i]}`)
+	}
+
 
 </script>
 </body>
