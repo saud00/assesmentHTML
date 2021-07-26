@@ -5,7 +5,7 @@
 <style>
 	body{margin: 3vh 5vw;}
 .text{background-color:dodgerblue;}
-code{background-color:lightslategray}
+code{color:darkslategray}
 strong{font-size: larger;background-color: orangered;}
 .des{background-color: mediumpurple;}
 .grid3{display: grid; grid-template-columns: 1fr 1fr 1fr; width: 100%;min-height: 10vh;}
@@ -123,11 +123,55 @@ document.getElementById("thisKeyword").innerHTML = person.fullName();
 
 <br><br><br>
 
-<div class="des">forIn loop is often used for interaion i objects</div>
+<div class="des">forEach loop doesnot return array like MAP function, it is used for working with arrays</div>
+<code>
+	let text;
+	const obj = cars.forEach(function (val, ind) {
+		text = ind + 2;
+	})
+</code>
+
+<br><br><br>
+
+<div class="des">forIn loop is often used for interaion in objects</div>
 <code>
 	for(let i in person){
-		console.log(`${i} : ${person[i]}`)
+		text +=  ` ${person[i]}`
 	}
+	console.log(text)
+</code>
+
+<br><br><br>
+
+<div class="des">Another method to convert object to Array using Array.from()</div>
+<code>
+	const myArr = Array.from(object);
+</code>
+
+<br><br><br>
+
+<div class="des">querySelectorAll return the array. Through forEach loop we make changes in text</div>
+<code>const dess = document.querySelectorAll('code') ; <br>
+	dess.forEach(function(val){ <br>
+	val.style.color = 'white'; <br>
+	})</code>
+
+<br><br><br>
+
+<div id="test" class="des" ></div>
+<div class="des">document.querySelector always select first element</div>
+<div class="des"> <ul> <li> Here '#' is used for id</li> 
+<li>'.' is used for className</li>
+<li> We can also use other tags like 'h1' 'ul li' </li>
+
+</ul></div>
+
+<br><br><br>
+
+<div class="des">We can work on parent and Child of perticular DOM Element</div>
+<code>
+	console.log(document.body.children); <br>
+	console.log(document.getElementById('concat').parentElement);
 </code>
 
 <br><br><br>
@@ -139,7 +183,29 @@ onclick="print()">print</button>
 </div>
 
 
+
+
+        			<!------------- Code for HTML --------------->
+
+
+
+
 <script>
+
+	console.log(document.body.children);
+	console.log(document.getElementById('concat').parentElement);
+
+	document.querySelector('#test').innerText='We can use document.querySelector(\'#idName\') for selecting any perticular id';
+	document.querySelector('li:nth-child(2)').textContent.color = 'red';
+
+	const dess = document.querySelectorAll('.des') ;
+	dess.forEach(function(val){
+	val.style.color = 'white';
+	})
+
+	const tagNAme= document.getElementsByTagName('h1') ;
+	console.log(tagNAme[0]);
+	tagNAme[0].style.color = 'red';
 
 	(function(name){console.log(`I am Immidiately Invokable Function Expression ${name}`)})("saud");
 
@@ -179,12 +245,6 @@ const cars= [
 	}
 ];
 
-	const obj = cars.forEach(function (val) {
-		//return (val)	;
-		console.log(val);
-	})
-	console.log(obj)
-
 
 const person={firstName:"saud", lastName:"Malik",  email:"saud@hmail.com", password:"fjsdjf",
 	 fullName : function(){
@@ -199,14 +259,24 @@ const person={firstName:"saud", lastName:"Malik",  email:"saud@hmail.com", passw
 
 	document.getElementById("thisKeyword").innerHTML = person.fullName();
 	
-
+	
 	document.getElementById("addEvent").addEventListener("click", function(){
 		document.getElementById("listener").innerHTML= "I am provoked by addEventListener"
 	})
+	
+// FOR EACH LOOP
+	let text;
+	const obj = cars.forEach(function (val, ind) {
+			   text = ind + 2;
+	})
+		console.log(text)
+		
+		// FOR IN LOOP
+		for(let i in person){
+			text +=  ` ${person[i]}`
+		}
+		console.log(text)
 
-	for(let i in person){
-		console.log(`${i} : ${person[i]}`)
-	}
 
 
 </script>
