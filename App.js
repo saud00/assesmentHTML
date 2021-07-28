@@ -66,8 +66,10 @@ document.addEventListener("mousemove", function (e) {
 // than apply condition on it
 
 document.body.addEventListener("click", function (e) {
-  if (e.target.classList.contains("email")) {
-    console.log(e.className);
-    e.target.parentElement.parentElement.remove();
+  if (e.target.classList.contains("submit")) {
+    console.log(e.target.className);
+    //  e.target.parentElement.parentElement.remove();
+
+    localStorage.setItem("key", `${e.screenX}`);
   }
 });
