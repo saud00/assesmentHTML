@@ -67,9 +67,19 @@ document.addEventListener("mousemove", function (e) {
 
 document.body.addEventListener("click", function (e) {
   if (e.target.classList.contains("submit")) {
-    console.log(e.target.className);
     //  e.target.parentElement.parentElement.remove();
 
-    localStorage.setItem("key", `${e.screenX}`);
+    let input = document.querySelector(".email").value;
+    let inputArr;
+
+    localStorage.getItem("inputArr") === null
+      ? (inputArr = [])
+      : (inputArr = JSON.parse(localStorage.getItem("inputArr")));
+
+    inputArr.push(input);
+
+    // we have to store setItem as a string , so json.stringify
+    localStorage.setItem("inputArr", JSON.stringify(inputArr));
+    e.preventDefault();
   }
 });
