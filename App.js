@@ -144,5 +144,75 @@ const display = new workPrototype('saud', 'malik')
 
 display.changeName('mahaz')
 
-
 console.log(display.fn())
+
+/////////////////////////////////////////////////////
+
+//             JS classes
+
+class Person2{
+  constructor(firstName, lastName){
+    this.firstName = firstName;
+    this.lastName = lastName
+  }
+
+  // method
+  welcome(){
+    return `Welcome ${this.firstName} ${this.lastName}`
+  }
+
+  changeName(newName){
+    this.firstName = newName
+  }
+
+  //    Static methods, we dont need to call static method through Object
+  //    Static  method is independent of 'this' keyword
+
+  static add(x,y){
+    return x + y;
+  }
+
+}
+
+const call = new Person2('saud', 'malik')
+
+console.log(call.welcome())
+call.changeName('qasim')
+console.log(call.welcome())
+
+console.log(Person2.add(3,5))
+
+
+/////////////////////////////////////////////////////
+
+//            Inheritance Or Sub-classes in JS
+
+// Child class has access of parent-class through 'super()'
+
+class Parent{
+  constructor(a, b){
+    this.firstName = a;
+    this.lastName = b;
+  }
+
+  greeting(){
+    return  `Hello ${this.firstName} ${this.lastName}`
+  }
+}
+
+class Child extends Parent{
+  constructor(a, b, c, d){
+    super(a, b)
+    this.age = c;
+    this.grade = d;
+  }
+
+  static directCall(){
+    return  ` Your password is wrong`
+  }
+}
+
+const saud = new Child('saad', 'saud', 'maaz', 'mohaviz')
+console.log(saud)
+
+console.log(Child.directCall())
